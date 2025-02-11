@@ -1,0 +1,7 @@
+{% for type, messages in app.flashes %}
+    {% for message in messages %}
+    <div class="d-flex border alert alert-{{ type }} rounded p-4 m-4">
+        {{ message }}
+    </div>
+    {% endfor %}
+{% endfor %}

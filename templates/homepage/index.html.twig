@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My_Quizz{% endblock %}
+
+{% block body %}
+<h1>Liste des quizz</h1>
+<ul>
+<h2>     {% for name in names %}
+<li>     <a href="/quiz-{{name.id}}"> {{name.name}}</a></li>
+    {% endfor %}  </h2>
+</ul>
+{% endblock %}

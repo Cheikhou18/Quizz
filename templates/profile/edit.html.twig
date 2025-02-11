@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="flex flex-col justify-center items-center h-screen gap-4">
+        <div class="flex flex-col">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'border'}}) }}
+        </div>
+
+        <div class="flex flex-col">
+            {{ form_label(form.password) }}
+            {{ form_widget(form.password, {'attr': {'class': 'border'}}) }}
+        </div>
+
+        <input type="submit" class="border p-4 rounded-xl">
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

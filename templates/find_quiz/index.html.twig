@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Quiz{% endblock %}
+
+{% block body %}
+
+<h1>     {% for name in names %}
+        {{name.name}}
+    {% endfor %}  </h1>
+
+<h3>
+    {% for question in questions %}
+        {{question.question}}
+    {% endfor %}
+</h3>
+
+<form action="/" method="get">
+
+    {% for reponse in reponses %}
+       <input type="radio" value="{{reponse.reponse}}" required>
+       <label for="{{reponse.reponse}}">{{reponse.reponse}}</label>
+       <br>
+    {% endfor %}
+    <br>
+    <button type="submit" value="Envoyer"> Envoyer</button>
+</form>
+{% endblock %}
